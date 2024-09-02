@@ -19,13 +19,15 @@ export const activities = pgTable('activities', {
 export const months = pgTable('months', {
   id: serial('id').primaryKey(),
   month: varchar('month', { length: 10 }).notNull(),
+  date: date('date').notNull(), 
   activityId: integer('activity_id').references(() => activities.id).notNull(),
+  activityName: varchar('activity_name', { length: 255 }).notNull(),  // New column for activity name
   year: integer('year').notNull(),
 });
 
 export const participants = pgTable('participants', {
   id: serial('id').primaryKey(),
-  activityId: integer('activity_id').references(() => activities.id).notNull(),  
+  activityId: integer('activity_id').references(() => activities.id).notNull(), 
   fullName: varchar('full_name', { length: 255 }).notNull(),  
   email: varchar('email', { length: 255 }).notNull(),
 });
