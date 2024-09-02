@@ -1,12 +1,12 @@
 import express from 'express';
 import { allMonths, monthById, createMonth, deleteMonth, updateMonth } from '../controllers/months';
 
-const montshRouter = express.Router();
+const montshRoute = express.Router();
 
-montshRouter.get('/', allMonths);
-montshRouter.get('/:id', monthById);
-montshRouter.post('/', createMonth);
-montshRouter.put('/', updateMonth);
-montshRouter.delete('/', deleteMonth);
+montshRoute.get('/', allMonths);
+montshRoute.get('/:id', monthById);
+montshRoute.post('/', createMonth);
+montshRoute.put('/', updateMonth);
+montshRoute.delete('/', deleteMonth);
 
-export default montshRouter;
+export default montshRoute;

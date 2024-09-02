@@ -1,12 +1,12 @@
 import express from 'express';
 import { participantById, allParticipants, createParticipant, deleteParticipant, updateParticipant } from '../controllers/participants';
 
-const participantsRouter = express.Router();
+const participantsRoute = express.Router();
 
-participantsRouter.get('/', allParticipants);
-participantsRouter.get('/:id', participantById);
-participantsRouter.post('/', createParticipant);
-participantsRouter.put('/', updateParticipant);
-participantsRouter.delete('/', deleteParticipant);
+participantsRoute.get('/', allParticipants);
+participantsRoute.get('/:id', participantById);
+participantsRoute.post('/', createParticipant);
+participantsRoute.put('/', updateParticipant);
+participantsRoute.delete('/', deleteParticipant);
 
-export default participantsRouter;
+export default participantsRoute;

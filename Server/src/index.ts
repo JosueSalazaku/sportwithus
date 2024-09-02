@@ -3,9 +3,10 @@ import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import { db } from './db';
-import activitiesRouter from './routes/activities';
-import monthsRouter from './routes/months';
-import participantsRouter from './routes/participants';
+import activitiesRoute from './routes/activities';
+import montshRoute from './routes/months';
+import participantsRoute from './routes/participants';
+import usersRoute from './routes/users';
 
 dotenv.config();
 const app = express();
@@ -17,10 +18,10 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 app.use(cors());
 
-// app.use("/api/users", usersRoute);
-app.use("/api/participants", participantsRouter);
-app.use("/api/activities", activitiesRouter);
-app.use("/api/months", monthsRouter);
+app.use("/api/users", usersRoute);
+app.use("/api/participants", participantsRoute);
+app.use("/api/activities", activitiesRoute);
+app.use("/api/months", montshRoute);
 
 app.get('/', async (req: express.Request, res: express.Response) => {
     res.send("Hello World");

@@ -1,13 +1,13 @@
 import express from 'express';
-import { allUsers, monthById, createMonth, deleteMonth, updateMonth } from '../controllers/users';
+import { allUsers, userById, createUser, deleteUser, updateUser } from '../controllers/users';
 
 
-const usersRouter = express.Router();
+const usersRoute = express.Router();
 
-usersRouter.get('/', allUsers);
-usersRouter.get('/:id', monthById);
-usersRouter.post('/', createMonth);
-usersRouter.put('/', updateMonth);
-usersRouter.delete('/', deleteMonth);
+usersRoute.get('/', allUsers);
+usersRoute.get('/:id', userById);
+usersRoute.post('/', createUser);
+usersRoute.put('/', updateUser);
+usersRoute.delete('/', deleteUser);
 
-export default usersRouter;
+export default usersRoute;
