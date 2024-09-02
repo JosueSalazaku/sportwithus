@@ -1,6 +1,7 @@
 import express from 'express';
 import { createClient } from '@supabase/supabase-js'
 import dotenv from 'dotenv';
+import { db } from './db';
 
 dotenv.config();
 const app = express();
