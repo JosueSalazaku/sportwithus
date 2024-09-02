@@ -3,7 +3,6 @@ import { db } from '../db';
 import { eq } from 'drizzle-orm/expressions';
 import { months } from '../schema';  // Corrected import path
 
-// Fetch all months
 export const allMonths = async (req: Request, res: Response) => {
   try {
     const allMonths = await db.select().from(months).execute();
@@ -13,7 +12,7 @@ export const allMonths = async (req: Request, res: Response) => {
   }
 };
 
-// Fetch a month by ID
+
 export const monthById = async (req: Request, res: Response) => { 
   const monthId = req.params.id;
   if (!monthId) {
@@ -37,7 +36,6 @@ export const monthById = async (req: Request, res: Response) => {
   }
 };
 
-// Create a new month
 export const createMonth = async (req: Request, res: Response) => {
   const { month, activityId, date, year, activityName } = req.body;
   
@@ -71,7 +69,6 @@ export const createMonth = async (req: Request, res: Response) => {
   }
 };
 
-// Update a month
 export const updateMonth = async (req: Request, res: Response) => { 
   const { id, month, activityId, date, year, activityName } = req.body;
   if (!id || !month || !activityId || !date || !year || !activityName) {
@@ -110,7 +107,6 @@ export const updateMonth = async (req: Request, res: Response) => {
   }
 };
 
-// Delete a month
 export const deleteMonth = async (req: Request, res: Response) => { 
   const monthId = req.params.id;
   if (!monthId) {

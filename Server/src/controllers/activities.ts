@@ -3,7 +3,7 @@ import { db } from "../db";
 import { eq } from "drizzle-orm/expressions";
 import { activities } from "../schema";
 
-// Get all activities
+
 export const allActivities = async (req: Request, res: Response) => {
   try {
     const allActivities = await db.select().from(activities).execute();
@@ -15,7 +15,7 @@ export const allActivities = async (req: Request, res: Response) => {
   }
 };
 
-// Get an activity by ID
+
 export const ActivityById = async (req: Request, res: Response) => {
   const activityId = req.params.id;
   if (!activityId) {
@@ -41,7 +41,7 @@ export const ActivityById = async (req: Request, res: Response) => {
   }
 };
 
-// Create a new activity
+
 export const createActivity = async (req: Request, res: Response) => {
   const { name, description, location, date, time, price } = req.body;
 
@@ -79,7 +79,7 @@ export const createActivity = async (req: Request, res: Response) => {
   }
 };
 
-// Update an existing activity
+
 export const updateActivity = async (req: Request, res: Response) => {  // Corrected function name
   const {
     id,
@@ -140,7 +140,7 @@ export const updateActivity = async (req: Request, res: Response) => {  // Corre
   }
 };
 
-// Delete an activity by ID
+
 export const deleteActivity = async (req: Request, res: Response) => {
   const activityId = req.params.id;  // Use URL parameter instead of body
 
