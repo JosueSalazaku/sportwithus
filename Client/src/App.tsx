@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import calendar from './pages/calendar';
 import home from './pages/home';
