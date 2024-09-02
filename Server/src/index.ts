@@ -5,6 +5,7 @@ import cors from 'cors';
 import { db } from './db';
 import activitiesRouter from './routes/activities';
 import monthsRouter from './routes/months';
+import participantsRouter from './routes/participants';
 
 dotenv.config();
 const app = express();
@@ -17,6 +18,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 app.use(cors());
 
 // app.use("/api/users", usersRoute);
+app.use("/api/participants", participantsRouter);
 app.use("/api/activities", activitiesRouter);
 app.use("/api/months", monthsRouter);
 

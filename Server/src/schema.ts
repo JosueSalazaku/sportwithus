@@ -2,8 +2,8 @@ import { pgTable, serial, text, varchar, integer, date, numeric } from 'drizzle-
 
 export const users = pgTable('users', {
   id: serial('id').primaryKey(),
-  fullName: varchar('full_name', { length: 255 }).notNull(),  
-  phone: varchar('phone', { length: 256 }).notNull(),
+  name: varchar('name', { length: 255 }).notNull(),  
+  email: varchar('email', { length: 255 }).notNull(),
 });
 
 export const activities = pgTable('activities', {
