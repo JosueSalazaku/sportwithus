@@ -1,15 +1,9 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabaseClient'; 
+import { Month } from '@/types';
 
 export default function Months() {
-    
-  interface Month {
-    id: number;
-    month: string;
-  }
-  
   const [months, setMonths] = useState<Month[]>([]);
-
   useEffect(() => {
     getMonths();
   }, []);
