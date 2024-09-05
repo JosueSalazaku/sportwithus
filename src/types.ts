@@ -16,3 +16,10 @@ export interface Avtivities {
     price: number;
     participants: number;
 }
+
+export interface Participants {
+    id: number;
+    name: string;
+    activity: string;
+    email: string;
+}
