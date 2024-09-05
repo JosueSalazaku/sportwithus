@@ -1,12 +1,12 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import calendar from './pages/calendar';
-import home from './pages/home';
+import { Routes, Route } from 'react-router-dom';
+import Calendar from './pages/calendar';
+import Home from './pages/home';
 
 export default function App() {
   return (
-    <Router>
-        <Route path="/" Component={home}/>
-        <Route path="/calendar" Component={calendar} />
-    </Router>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/calendar" element={<Calendar />} />
+    </Routes>
+  );
 }

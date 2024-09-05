@@ -1,4 +1,4 @@
-export default function home() {
+export default function Home() {
     return (
       <main className='w-screen h-screen flex justify-center items-center'>
         <div className='flex flex-col justify-center items-center space-y-6'>

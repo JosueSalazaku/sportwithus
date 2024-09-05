@@ -1,6 +1,6 @@
 
 
-export default  function calendar() {
+export default  function Calendar() {
   return (
     <div>calendar</div>
   )
