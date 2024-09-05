@@ -4,8 +4,14 @@ import postgres from "postgres";
 import { users, activities, months, participants } from "./schema";
 
 dotenv.config();
-const connectionString = process.env.DATABASE_URL || "";
-export const client = postgres(connectionString, { prepare: false });
+
+const connectionString = process.env.DATABASE_URL || '';
+
+const client = postgres(connectionString, {
+  ssl: { rejectUnauthorized: false }, // Use SSL for Supabase connections
+  prepare: false // Optional: depending on if you need prepared statements
+});
+
 export const db = drizzle(client);
 
 export const allUsers = db.select().from(users);
