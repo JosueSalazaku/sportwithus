@@ -15,6 +15,6 @@ const client = postgres(connectionString, {
 export const db = drizzle(client);
 
 export const allUsers = db.select().from(users);
-export const allActivities = db.select().from(activities);
-export const allMonths = db.select().from(months);
-export const allParticipants = db.select().from(participants);
+// export const allActivities = db.select().from(activities);
+// export const allMonths = db.select().from(months);
+// export const allParticipants = db.select().from(participants);
