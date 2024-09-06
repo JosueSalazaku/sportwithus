@@ -9,12 +9,15 @@ export default function Months() {
   }, []);
 
   async function getMonths() {
+    try {
       const { data, error } = await supabase.from('months').select();
+      if (error) {
+        throw error;
+      }
       console.log(data);
-    if (error) {
-      console.error('Error fetching months:', error);
-    } else {
       setMonths(data);
+    } catch (error) {
+      console.error('Error fetching months:', error);
     }
   }
 
@@ -25,7 +28,8 @@ export default function Months() {
         {months.length > 0 ? (
           months.map((month) => (
             <li key={month.id}>
-              {month.month}
+                  {month.month}
+                  {month.activityName}
             </li>
           ))
         ) : (

@@ -2,12 +2,12 @@ export interface Month {
     id: number;
     name: string;
     month: string;
-    activities: Avtivities[];
+    activities: Activities[];
     activityName: string;
     yeart: number;
 }
   
-export interface Avtivities {
+export interface Activities {
     id: number
     name: string;
     descripton: string;
