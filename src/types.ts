@@ -3,7 +3,7 @@ export interface Month {
     name: string;
     month: string;
     activities: Activities[];
-    activityName: string;
+    activity_name: string;
     yeart: number;
 }
   

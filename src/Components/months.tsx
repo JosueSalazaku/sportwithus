@@ -27,10 +27,10 @@ export default function Months() {
       <ul>
         {months.length > 0 ? (
           months.map((month) => (
-            <li key={month.id}>
-                  {month.month}
-                  {month.activityName}
+            <li className='space-y-25' key={month.id}>
+                <span>{month.month}:</span> <span>{month.activity_name}</span>
             </li>
+
           ))
         ) : (
           <p>No data available</p>
