@@ -1,8 +1,11 @@
+import Months from "@/Components/months";
 
 
 export default  function Calendar() {
   return (
-    <div>calendar</div>
+    <div>calendar
+      <Months />
+    </div>
   )
 }
 

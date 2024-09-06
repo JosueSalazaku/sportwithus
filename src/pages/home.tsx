@@ -1,4 +1,5 @@
-import Months from "@/Components/months";
+import Activities from "@/Components/activities"
+import CurrentMonth from "@/Components/currentMonth";
 import { Button } from "@/Components/ui/button";
 import { useState } from "react";
 
@@ -13,8 +14,8 @@ export default function Home() {
         <div className='flex flex-col justify-center items-center space-y-6'>
           <h1 className='text-6xl font-black'>SPORT WITH US</h1>
           <p className="text-2xl font-medium">COMING SOON</p>
-          <Months />
-          {/* <Activities /> */}
+          <CurrentMonth />
+          <Activities />
           <Button onClick={addCount}>CLICK HER TO JOIN {count}</Button>
         </div>
 
