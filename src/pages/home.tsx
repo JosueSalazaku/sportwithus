@@ -1,4 +1,4 @@
-import Activities from "@/Components/activities"
+import CurrentActivity from "@/Components/currentActivity";
 import CurrentMonth from "@/Components/currentMonth";
 import { Button } from "@/Components/ui/button";
 import { useState } from "react";
@@ -15,7 +15,7 @@ export default function Home() {
           <h1 className='text-6xl font-black'>SPORT WITH US</h1>
           <p className="text-2xl font-medium">COMING SOON</p>
           <CurrentMonth />
-          <Activities />
+          <CurrentActivity />
           <Button onClick={addCount}>CLICK HER TO JOIN {count}</Button>
         </div>
 

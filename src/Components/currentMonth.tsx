@@ -35,13 +35,10 @@ export default function CurrentMonth() {
         }
       }
     }
-
     // Initial fetch
     updateMonth();
-
     // Set an interval to check for the month change every 15 seconds
     const intervalId = setInterval(updateMonth, 15000);
-
     // Cleanup the interval on component unmount
     return () => clearInterval(intervalId);
   }, []);
@@ -50,8 +47,8 @@ export default function CurrentMonth() {
     <div>
       {thisMonth ? (
         <div>
-          <h1 className='text-2xl font-bold'>{thisMonth.month}</h1>
-          <p>Activity: {thisMonth.activity_name}</p>
+          <h1 className='text-4xl font-bold'>{thisMonth.month}</h1>
+          {/* <p>Activity: {thisMonth.activity_name}</p> */}
         </div>
       ) : (
         <p>Loading...</p>

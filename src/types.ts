@@ -4,13 +4,14 @@ export interface Month {
     month: string;
     activities: Activities[];
     activity_name: string;
+    activity_id: number;
     yeart: number;
 }
   
 export interface Activities {
     id: number
     name: string;
-    descripton: string;
+    description: string;
     date: string;
     location: string;
     price: number;
