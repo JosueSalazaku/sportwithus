@@ -14,6 +14,7 @@ export default function Activities() {
       if (error) {
         throw error;
       }
+      console.log(data)
       setActivities(data);
     } catch (error) {
       console.error('Error fetching activities:', error);
@@ -25,7 +26,9 @@ export default function Activities() {
       <h1>Activities</h1>
       <ul>
         {activities.map(activity => (
-          <li key={activity.id}>{activity.name}</li>
+          <li key={activity.id}>{activity.name},
+            {activity.id}
+          </li>
         ))}
       </ul>
     </div>
