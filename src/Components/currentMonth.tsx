@@ -3,10 +3,11 @@ import { Month } from '@/types'
 import { useEffect, useState } from 'react'
 
 export default function CurrentMonth() {
-  const monthNames = [
-    "Januari", "Februari", "Maart", "April", "Mei", "Juni",
-    "Juli", "Augustus", "September", "Oktober", "November", "December"
-  ];
+    const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+      
     
   const realMonthIndex = new Date().getMonth(); 
   const realMonthName = monthNames[realMonthIndex]; 
