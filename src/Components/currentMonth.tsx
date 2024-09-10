@@ -37,8 +37,8 @@ export default function CurrentMonth() {
     }
     // Initial fetch
     updateMonth();
-    // Set an interval to check for the month change every 15 seconds
-    const intervalId = setInterval(updateMonth, 15000);
+
+    const intervalId = setInterval(updateMonth, 65000);
     // Cleanup the interval on component unmount
     return () => clearInterval(intervalId);
   }, []);

@@ -16,7 +16,7 @@ export default function CurrentActivity() {
     async function fetchCurrentMonth() {
       const realMonthIndex = new Date().getMonth();
       const realMonthName = monthNames[realMonthIndex];
-      
+
       try {
         const { data, error } = await supabase
           .from('months')
@@ -65,7 +65,7 @@ export default function CurrentActivity() {
 
     const intervalId = setInterval(updateActivity, 60000); // Update every minute
     return () => clearInterval(intervalId); // Cleanup on unmount
-  }, [currentMonth]); // Re-run effect when currentMonth changes
+  }, []); // Use an empty dependency array to ensure this runs once and only on mount
 
   return (
     <div>
